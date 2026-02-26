@@ -1,0 +1,271 @@
+/* App-specific styles with Sasak/Lombok cultural elements */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sasak Pattern Background - Traditional Lombok textile motif */
+.sasak-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A03A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Tenun Ikat inspired border pattern */
+.tenun-border {
+  position: relative;
+}
+
+.tenun-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    #D4A03A 0%, 
+    #8B4513 25%, 
+    #D4A03A 50%, 
+    #8B4513 75%, 
+    #D4A03A 100%
+  );
+  background-size: 100px 100%;
+}
+
+/* Peresean-inspired decorative elements */
+.peresean-accent {
+  position: relative;
+}
+
+.peresean-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4A03A, transparent);
+}
+
+/* Card hover effects with Lombok touch */
+.card-dark {
+  transition: all 0.3s ease;
+}
+
+.card-dark:hover {
+  border-color: rgba(212, 160, 58, 0.3);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4), 0 0 30px rgba(212, 160, 58, 0.1);
+}
+
+/* Button animations */
+.btn-primary,
+.btn-outline {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before,
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before,
+.btn-outline:hover::before {
+  left: 100%;
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transform-origin: left;
+}
+
+/* Image hover zoom */
+.group:hover img {
+  transform: scale(1.05);
+}
+
+/* Form input focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px rgba(212, 160, 58, 0.2);
+}
+
+/* FAQ accordion transition */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-content.open {
+  max-height: 500px;
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu {
+  animation: slideDown 0.3s ease;
+}
+
+/* Star rating animation */
+.star-icon {
+  transition: transform 0.2s ease;
+}
+
+.star-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Tag hover effect */
+.tag-chip {
+  transition: all 0.2s ease;
+}
+
+.tag-chip:hover {
+  transform: translateY(-2px);
+}
+
+/* Navigation scroll state */
+nav {
+  transition: all 0.4s ease;
+}
+
+/* Section entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stagger delay utilities */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Sasak cultural decorative elements */
+.sasak-ornament {
+  background: linear-gradient(135deg, 
+    rgba(212, 160, 58, 0.1) 0%, 
+    rgba(139, 69, 19, 0.1) 50%, 
+    rgba(212, 160, 58, 0.1) 100%
+  );
+}
+
+/* Traditional Lombok color accents */
+.lombok-accent {
+  color: #D4A03A;
+}
+
+.lombok-bg {
+  background-color: #0B1E1C;
+}
+
+/* Batik pattern overlay for sections */
+.batik-overlay {
+  position: relative;
+}
+
+.batik-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4A03A' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem) !important;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Print styles */
+@media print {
+  .grain-overlay,
+  nav,
+  .floating-whatsapp {
+    display: none !important;
+  }
+  
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+/* Custom scrollbar with Lombok colors */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1E1C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4A03A, #8B4513);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #E5B14B, #A0522D);
+}
+
+/* Selection styling with Lombok gold */
+::selection {
+  background: #D4A03A;
+  color: #0B1E1C;
+}
